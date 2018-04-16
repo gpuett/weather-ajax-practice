@@ -17,3 +17,10 @@ Entry.prototype.countConsonants = function() {
   var consonants = this.body.match(/[^aeiou\W]/gi);
   return consonants.length;
 }
+
+Entry.prototype.getTeaser = function() {
+  var firstSentence = this.body.match(/.+?[!.?]/);
+  firstSentence = firstSentence.join();
+  var splitSent = firstSentence.split(' ', 8);
+  return splitSent.join(' ');
+}
