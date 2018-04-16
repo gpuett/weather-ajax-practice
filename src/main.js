@@ -1,22 +1,9 @@
-import { Entry } from './journal.js';
+// import { Constructor } from './project.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
-  $("#journal-form").submit(function(event) {
-    event.preventDefault();
-    var inputTitle = $("#title").val();
-    var inputBody = $("#body").val();
-    var newEntry = new Entry(inputTitle, inputBody);
-    var output = newEntry.countWords();
-    var numVowels = newEntry.countVowels();
-    var numCons = newEntry.countConsonants();
-    var sentence = newEntry.getTeaser();
-    $("#output").append("<li>" + inputTitle + " -Words: " + output + " -Vowels: " + numVowels + " -Consonants " + numCons + " Teaser: " + sentence + "</li>");
-
-  $("#title").val("");
-  $("#body").val("");
-  });
+  
 });
