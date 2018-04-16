@@ -1,4 +1,7 @@
 import { Entry } from './journal.js';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
@@ -14,6 +17,6 @@ $(document).ready(function() {
     $("#output").append("<li>" + inputTitle + " -Words: " + output + " -Vowels: " + numVowels + " -Consonants " + numCons + " Teaser: " + sentence + "</li>");
 
   $("#title").val("");
-  $("#body").val("");  
+  $("#body").val("");
   });
 });
