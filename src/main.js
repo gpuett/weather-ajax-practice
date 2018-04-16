@@ -11,6 +11,9 @@ $(document).ready(function() {
     var numVowels = newEntry.countVowels();
     var numCons = newEntry.countConsonants();
     var sentence = newEntry.getTeaser();
-    $("#output").text(inputTitle + " -Words: " + output + " -Vowels: " + numVowels + " -Consonants " + numCons + " Teaser: " + sentence);
+    $("#output").append("<li>" + inputTitle + " -Words: " + output + " -Vowels: " + numVowels + " -Consonants " + numCons + " Teaser: " + sentence + "</li>");
+
+  $("#title").val("");
+  $("#body").val("");  
   });
 });
