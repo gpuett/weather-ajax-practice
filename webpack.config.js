@@ -16,7 +16,7 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new CopyWebpackPlugin([ ...patterns ], options)
+    new CopyWebpackPlugin([ from: './src/img', to: 'img'])
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
