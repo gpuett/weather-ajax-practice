@@ -20,12 +20,12 @@ module.exports = {
     new CopyWebpackPlugin([ {from: 'src/img', to: 'img'}]),
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
-    new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'project',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new Dotenv(),
   ],
   module: {
     rules: [
